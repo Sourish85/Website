@@ -1,170 +1,418 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sourish Suri — Portfolio</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .typing::after { content: '|'; animation: blink 1s infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-  </style>
-</head>
-<body class="bg-gradient-to-b from-[#0b0d10] to-[#111419] text-white">
-  <!-- Navbar -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <h1 class="font-extrabold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">SS</h1>
-      <nav>
-        <ul class="flex space-x-6 text-sm">
-          <li><a href="#about" class="hover:text-cyan-400">About</a></li>
-          <li><a href="#experience" class="hover:text-cyan-400">Experience</a></li>
-          <li><a href="#research" class="hover:text-cyan-400">Research & Projects</a></li>
-          <li><a href="#contact" class="px-3 py-1 rounded-2xl bg-gradient-to-r from-cyan-400 to-purple-400 text-black font-bold">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="max-w-6xl mx-auto px-6 py-28 text-center">
-    <h1 id="hero-typing" class="text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></h1>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center">
-    <h2 class="text-3xl font-bold mb-6">About</h2>
-    <p class="text-gray-400 mb-4">
-      I’m passionate about building data-driven solutions at the intersection of mathematics, machine learning, and quantitative finance. Currently pursuing a BS in Data Science and Mathematics-Computer Science at UC San Diego’s Halıcıoğlu Data Science Institute.
-    </p>
-    <p class="text-gray-400 mb-4">
-      My experience spans research in LLMs and robotics at the University of Pennsylvania, and internships in forecasting, R&D, and machine learning with major industrial firms.
-    </p>
-    <p class="text-gray-400 mb-10">
-      I’m also the founder of SYLVASYNTH, an agritech startup leveraging CNNs for crop disease detection deployed with 50+ farmers across Asia.
-    </p>
-    <!-- Skills -->
-    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-      <h3 class="font-semibold mb-6 text-lg">Skills</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="flex flex-col items-center">
-          <img src="https://img.icons8.com/color/48/python.png" alt="Python"/>
-          <p class="mt-2">Python</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="C++"/>
-          <p class="mt-2">C++</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="https://img.icons8.com/color/48/sql.png" alt="SQL"/>
-          <p class="mt-2">SQL</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI"/>
-          <p class="mt-2">Machine Learning</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="max-w-4xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-10 text-center">Experience</h2>
-    <div class="space-y-12">
-      <div class="border-l-2 border-cyan-400 pl-6 relative">
-        <span class="absolute -left-3 top-2 w-6 h-6 bg-cyan-400 rounded-full"></span>
-        <h3 class="font-semibold text-xl">Data Science Intern — Evoastra Ventures Pvt. Ltd.</h3>
-        <p class="text-sm text-gray-400 mb-2">Jul - Aug 2025</p>
-        <p class="text-gray-300">Designed and implemented an image captioning pipeline combining CNN feature extraction (InceptionV3) with LSTM-based sequence generation. Optimized with categorical cross-entropy and Adam, achieving coherence on MS COCO with BLEU evaluation.</p>
-      </div>
-      <div class="border-l-2 border-cyan-400 pl-6 relative">
-        <span class="absolute -left-3 top-2 w-6 h-6 bg-cyan-400 rounded-full"></span>
-        <h3 class="font-semibold text-xl">R&D Intern — Valeo Ind. Pvt. Ltd.</h3>
-        <p class="text-sm text-gray-400 mb-2">Aug - Oct 2024</p>
-        <p class="text-gray-300">Monitored sales trends for 200+ firms and developed forecasting models for inventory optimization. Designed six data-driven models that enhanced demand forecasting accuracy and improved supply chain decisions.</p>
-      </div>
-      <div class="border-l-2 border-cyan-400 pl-6 relative">
-        <span class="absolute -left-3 top-2 w-6 h-6 bg-cyan-400 rounded-full"></span>
-        <h3 class="font-semibold text-xl">Machine Learning Intern — JP Motors Ltd.</h3>
-        <p class="text-sm text-gray-400 mb-2">May - Jul 2024</p>
-        <p class="text-gray-300">Applied regression and time-series methods on multi-year automobile sales data to forecast SKU-level demand. Analyzed seasonal pricing fluctuations and optimized procurement planning across 300+ retail outlets.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research & Projects -->
-  <section id="research" class="max-w-4xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-10 text-center">Research & Projects</h2>
-    <div class="space-y-6">
-      <a href="https://github.com/Sourish85/CNN-CROP-DIS-DETECTOR" target="_blank" class="group block bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400 transition">
-        <h3 class="text-2xl font-semibold">SYLVASYNTH</h3>
-        <p class="text-sm text-gray-400">Founded an agritech startup that developed a CNN-based crop disease detection platform, achieving 94% accuracy on 250,000+ images. Deployed to 50+ farmers across India, Sri Lanka, Bangladesh, and the Philippines.</p>
-        <img src="https://img.icons8.com/color/96/plant-under-sun.png" alt="Sylvasynth" class="mt-4 opacity-70 group-hover:opacity-100 transition"/>
-      </a>
-      <a href="https://arxiv.org/abs/2507.09375v1" target="_blank" class="group block bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400 transition">
-        <h3 class="text-2xl font-semibold">University of Pennsylvania Collaboration</h3>
-        <p class="text-sm text-gray-400">Worked with Dr. Yifei Shao on applied research in large language models and neural robotics. Published on arXiv: "Automated Multi-Class Crop Pathology Classification via CNNs," advancing transformer-based architectures for cross-lingual vision tasks.</p>
-        <img src="https://img.icons8.com/color/96/university.png" alt="UPenn" class="mt-4 opacity-70 group-hover:opacity-100 transition"/>
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-    <p class="text-gray-400 mb-8">Have a question or want to collaborate? Reach out to me directly.</p>
-    <div class="flex gap-6 justify-center">
-      <a href="mailto:sourishwb@gmail.com" target="_blank" class="p-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 hover:scale-110 transform transition"><img src="https://img.icons8.com/ios-filled/50/ffffff/apple-mail.png" alt="Email" class="w-8 h-8"/></a>
-      <a href="https://www.linkedin.com/in/sourish-suri-b19b50235" target="_blank" class="p-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 hover:scale-110 transform transition"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" class="w-8 h-8"/></a>
-      <a href="https://github.com/Sourish85" target="_blank" class="p-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 hover:scale-110 transform transition"><img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" class="w-8 h-8"/></a>
-    </div>
-  </section>
-
-  <footer class="py-10 text-center text-gray-500 text-sm border-t border-white/10">
-    © <script>document.write(new Date().getFullYear())</script> Sourish Suri. Built with React, Tailwind, and animations.
-  </footer>
-
-  <script>
-    const sentences = [
-      "Hi, I’m Sourish Suri",
-      "Quantitative Research Enthusiast",
-      "Machine Learning & AI Explorer",
-      "Building at the intersection of Finance and Data Science"
-    ];
-
-    let part = 0;
-    let offset = 0;
-    let forwards = true;
-    let skipCount = 0;
-    let skipDelay = 15;
-    let speed = 100;
-    const target = document.getElementById("hero-typing");
-
-    function type() {
-      const sentence = sentences[part];
-      if (forwards) {
-        if (offset >= sentence.length) {
-          skipCount++;
-          if (skipCount === skipDelay) {
-            forwards = false;
-            skipCount = 0;
-          }
-        }
-      } else {
-        if (offset === 0) {
-          forwards = true;
-          part++;
-          if (part >= sentences.length) part = 0;
-        }
-      }
-      target.textContent = sentence.substring(0, offset);
-      if (skipCount === 0) offset += forwards ? 1 : -1;
+    :root{
+      --accent-from: #06b6d4;
+      --accent-to: #8b5cf6;
+      --muted: #9aa4b2;
+      --card: rgba(255,255,255,0.04);
+    }
+    [data-theme="light"]{
+      --bg: #f7fafc;
+      --text: #0f172a;
+      --card: rgba(2,6,23,0.04);
+      --muted: #475569;
+    }
+    [data-theme="dark"]{
+      --bg: #071021;
+      --text: #e6eef8;
+      --muted: #94a3b8;
     }
 
-    setInterval(type, speed);
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(800px 400px at 10% 0%, rgba(139,92,246,0.06), transparent),
+                  radial-gradient(800px 500px at 90% 100%, rgba(6,182,212,0.04), transparent);
+      background-color: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* typing caret */
+    .caret::after{
+      content: '|';
+      margin-left:6px;
+      opacity:1;
+      animation: blink 1s steps(2,start) infinite;
+      color: var(--accent-from);
+    }
+    @keyframes blink{50%{opacity:0}}
+
+    /* hero name gradient specifically */
+    .name-grad{background:linear-gradient(90deg,var(--accent-from),var(--accent-to)); -webkit-background-clip:text;background-clip:text;color:transparent}
+
+    /* skills hover */
+    .skill-card{backdrop-filter: blur(6px); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04);}
+
+    /* experience image area */
+    .exp-image{
+      min-height: 220px;
+      border-radius: 12px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 12px 30px rgba(2,6,23,0.35);
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- NAV -->
+    <header class="flex items-center justify-between py-5 sticky top-0 z-40 bg-transparent">
+      <div class="flex items-center gap-4">
+        <!-- SS text (left) -->
+        <div class="text-xl font-extrabold name-grad">SS</div>
+      </div>
+
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="#about" class="hover:text-sky-400">About</a>
+        <a href="#experience" class="hover:text-sky-400">Experience</a>
+        <a href="#research" class="hover:text-sky-400">Research</a>
+        <a href="#contact" class="rounded-full px-3 py-1 bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-black font-semibold">Contact</a>
+
+        <!-- Theme toggle -->
+        <button id="themeToggle" aria-label="Toggle theme" class="ml-3 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/8">
+          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path id="themePath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-8.66h-1M4.34 12.34h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M18.36 18.36l-.7-.7M6.34 6.34l-.7-.7" /></svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="flex flex-col items-center text-center mt-6 mb-12">
+      <!-- one-time typed name -->
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+        <span id="heroOne" class="caret"></span>
+      </h1>
+
+      <!-- rotating typed line below (keeps cycling) -->
+      <div class="text-xl text-[var(--muted)] mt-2">
+        <span id="heroRotating" class="caret"></span>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-8 flex gap-4">
+        <a href="#contact" class="px-5 py-3 rounded-full bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-black font-semibold">Get in touch</a>
+        <a href="#research" class="px-5 py-3 rounded-full border border-white/6">View work</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mb-16">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <!-- Left: short bio + skills stacked vertically -->
+        <div class="md:col-span-1">
+          <div class="p-6 rounded-2xl skill-card">
+            <h3 class="text-2xl font-semibold mb-3">About</h3>
+            <p class="text-sm text-[var(--muted)] mb-4">I’m Sourish Suri — building production-ready ML systems, applied research, and quantitative models. BS Data Science + Math-CS @ UCSD.</p>
+
+            <!-- Interactive skills compact -->
+            <div class="grid grid-cols-2 gap-3">
+              <!-- skill item (repeatable) -->
+              <button class="group flex items-center gap-3 p-2 rounded-lg hover:scale-[1.02] transition skill-card" data-skill="python">
+                <img src="https://img.icons8.com/color/48/python.png" alt="Python" class="w-9 h-9"/>
+                <div class="text-left">
+                  <div class="font-semibold">Python</div>
+                  <div class="text-xs text-[var(--muted)]">NumPy, Pandas</div>
+                </div>
+              </button>
+
+              <button class="group flex items-center gap-3 p-2 rounded-lg hover:scale-[1.02] transition skill-card" data-skill="pytorch">
+                <img src="https://img.icons8.com/color/48/pytorch.png" alt="PyTorch" class="w-9 h-9"/>
+                <div class="text-left">
+                  <div class="font-semibold">PyTorch</div>
+                  <div class="text-xs text-[var(--muted)]">DL / CV</div>
+                </div>
+              </button>
+
+              <button class="group flex items-center gap-3 p-2 rounded-lg hover:scale-[1.02] transition skill-card" data-skill="sql">
+                <img src="https://img.icons8.com/color/48/sql.png" alt="SQL" class="w-9 h-9"/>
+                <div class="text-left">
+                  <div class="font-semibold">SQL</div>
+                  <div class="text-xs text-[var(--muted)]">ETL & DBs</div>
+                </div>
+              </button>
+
+              <button class="group flex items-center gap-3 p-2 rounded-lg hover:scale-[1.02] transition skill-card" data-skill="ml">
+                <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="ML" class="w-9 h-9"/>
+                <div class="text-left">
+                  <div class="font-semibold">ML</div>
+                  <div class="text-xs text-[var(--muted)]">CV, NLP</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- skills detail panel (appears when interact) -->
+          <div id="skillDetail" class="mt-4 p-4 rounded-2xl bg-white/3 hidden">
+            <div id="sd-title" class="font-semibold text-lg">Hover a skill</div>
+            <div id="sd-desc" class="text-sm text-[var(--muted)] mt-2">Quick details appear here.</div>
+          </div>
+        </div>
+
+        <!-- Right: tall visual / illustration -->
+        <div class="md:col-span-2">
+          <div class="p-8 rounded-3xl skill-card">
+            <!-- Use a modern visual: split area with optional highlights -->
+            <h3 class="text-2xl font-semibold mb-4">What I build</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="col-span-2">
+                <p class="text-[var(--muted)]">I build image-to-text pipelines, forecasting systems for supply chains, and deploy models to edge devices. I combine strong math foundations with production engineering — fast prototyping to robust deployment.</p>
+                <ul class="mt-4 list-disc pl-5 text-sm text-[var(--muted)] space-y-2">
+                  <li>Image captioning (CNN → LSTM / Attention)</li>
+                  <li>Time-series forecasting & procurement optimization</li>
+                  <li>Model deployment / monitoring in Python & Docker</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center justify-center">
+                <!-- subtle decorative monogram -->
+                <div class="w-36 h-36 rounded-xl flex items-center justify-center name-grad text-3xl font-extrabold">SS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (left timeline, right image preview) -->
+    <section id="experience" class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-center">Experience</h2>
+
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <!-- timeline column -->
+        <div class="md:col-span-2 space-y-8">
+          <!-- experience item: each has data-image attribute for preview -->
+          <div class="relative pl-8">
+            <div class="absolute left-0 top-2 w-3 h-3 rounded-full bg-[var(--accent-from)]"></div>
+            <div class="font-semibold text-lg">Data Science Intern — Evoastra Ventures Pvt. Ltd.</div>
+            <div class="text-sm text-[var(--muted)] mb-2">Jul - Aug 2025</div>
+            <p class="text-[var(--muted)]">Designed and implemented an image captioning pipeline combining InceptionV3 features with an LSTM decoder, optimized training to reduce overfitting and improved BLEU scores for caption coherence.</p>
+            <div class="mt-2 text-sm text-[var(--muted)]">
+              <button class="mt-3 px-3 py-1 rounded-full bg-white/5 hover:bg-white/6" data-preview="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1">Preview image</button>
+            </div>
+          </div>
+
+          <div class="relative pl-8">
+            <div class="absolute left-0 top-2 w-3 h-3 rounded-full bg-[var(--accent-from)]"></div>
+            <div class="font-semibold text-lg">R&D Intern — Valeo Ind. Pvt. Ltd.</div>
+            <div class="text-sm text-[var(--muted)] mb-2">Aug - Oct 2024</div>
+            <p class="text-[var(--muted)]">Monitored sales data across 200+ firms, built SKU-level forecasting models, and automated reporting pipelines to improve procurement planning and inventory decisions.</p>
+            <div class="mt-2 text-sm text-[var(--muted)]">
+              <button class="mt-3 px-3 py-1 rounded-full bg-white/5 hover:bg-white/6" data-preview="https://images.unsplash.com/photo-1531497865142-0a5f6a8b0e3c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2">Preview image</button>
+            </div>
+          </div>
+
+          <div class="relative pl-8">
+            <div class="absolute left-0 top-2 w-3 h-3 rounded-full bg-[var(--accent-from)]"></div>
+            <div class="font-semibold text-lg">Machine Learning Intern — JP Motors Ltd.</div>
+            <div class="text-sm text-[var(--muted)] mb-2">May - Jul 2024</div>
+            <p class="text-[var(--muted)]">Applied regression and time-series methods for SKU demand forecasting, analyzed seasonality, and delivered tools for data-driven procurement across 300+ retail outlets.</p>
+            <div class="mt-2 text-sm text-[var(--muted)]">
+              <button class="mt-3 px-3 py-1 rounded-full bg-white/5 hover:bg-white/6" data-preview="https://images.unsplash.com/photo-1504215680853-026ed2a45def?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3">Preview image</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- preview image column -->
+        <div class="md:col-span-1">
+          <div id="expPreview" class="exp-image rounded-xl bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1')">
+          </div>
+          <div class="mt-3 text-sm text-[var(--muted)]">Hover a role to preview a visual related to the work.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & PROJECTS -->
+    <section id="research" class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-center">Research & Projects</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- SYLVASYNTH big card -->
+        <a href="https://github.com/Sourish85/CNN-CROP-DIS-DETECTOR" target="_blank" class="block rounded-2xl p-6 skill-card hover:scale-[1.01] transition">
+          <div class="flex gap-4 items-start">
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold mb-2">SYLVASYNTH</h3>
+              <p class="text-[var(--muted)] mb-4">Founder & lead on an agritech platform that detects crop diseases using CNNs. Deployed to 50+ farmers across Asia, trained on 250k+ images, achieved ~94% accuracy in field tests.</p>
+              <div class="flex gap-2 text-sm text-[var(--muted)]">
+                <span class="px-3 py-1 border rounded-full">CNN</span>
+                <span class="px-3 py-1 border rounded-full">Deployment</span>
+                <span class="px-3 py-1 border rounded-full">Open Source</span>
+              </div>
+            </div>
+
+            <div class="w-36 h-28 rounded-lg bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4')"></div>
+          </div>
+        </a>
+
+        <!-- UPENN -->
+        <a href="https://arxiv.org/abs/2507.09375v1" target="_blank" class="block rounded-2xl p-6 skill-card hover:scale-[1.01] transition">
+          <div class="flex gap-4 items-start">
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold mb-2">University of Pennsylvania — Collaboration</h3>
+              <p class="text-[var(--muted)] mb-4">Collaborated on applied research for LLMs and neural-robotics in vision. Co-authored arXiv paper: Automated Multi-Class Crop Pathology Classification via CNNs.</p>
+              <div class="flex gap-2 text-sm text-[var(--muted)]">
+                <span class="px-3 py-1 border rounded-full">LLMs</span>
+                <span class="px-3 py-1 border rounded-full">Robotics</span>
+                <span class="px-3 py-1 border rounded-full">arXiv</span>
+              </div>
+            </div>
+
+            <div class="w-36 h-28 rounded-lg bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5')"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-20 text-center">
+      <h2 class="text-3xl font-bold mb-4">Get in touch</h2>
+      <p class="text-[var(--muted)] mb-6">Open to research collaborations, internships, and quant/ML opportunities.</p>
+
+      <div class="flex items-center justify-center gap-6">
+        <a href="mailto:sourishwb@gmail.com" class="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-black shadow-md transform hover:scale-105 transition">
+          <!-- custom mail icon -->
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M3 8.5v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 8.5L12 14 3 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sourish-suri-b19b50235" target="_blank" class="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-black shadow-md transform hover:scale-105 transition">
+          <img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png" alt="LinkedIn"/>
+        </a>
+
+        <a href="https://github.com/Sourish85" target="_blank" class="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-black shadow-md transform hover:scale-105 transition">
+          <img src="https://img.icons8.com/ios-filled/24/000000/github.png" alt="GitHub"/>
+        </a>
+      </div>
+    </section>
+
+    <footer class="py-8 text-center text-sm text-[var(--muted)]">
+      © <span id="year"></span> Sourish Suri — Built with HTML, Tailwind & JS.
+    </footer>
+  </div>
+
+  <!-- SCRIPT: typing, theme, interactions -->
+  <script>
+    // ---- Theme toggle (persist)
+    const root = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if(saved) root.setAttribute('data-theme', saved);
+    else root.setAttribute('data-theme', 'dark');
+
+    function updateThemeIcon(){
+      const icon = document.getElementById('themePath');
+      if(root.getAttribute('data-theme') === 'light'){
+        icon.setAttribute('d','M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z'); // moon-ish
+      } else {
+        icon.setAttribute('d','M12 3v1m0 16v1m8.66-8.66h-1M4.34 12.34h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M18.36 18.36l-.7-.7M6.34 6.34l-.7-.7');
+      }
+    }
+    updateThemeIcon();
+
+    themeToggle.addEventListener('click', ()=>{
+      const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', current);
+      localStorage.setItem('theme', current);
+      updateThemeIcon();
+    });
+
+    // ---- Typing: one-time hero name, rotating second line
+    const heroOne = document.getElementById('heroOne');
+    const heroRot = document.getElementById('heroRotating');
+
+    const nameLine = 'Hi, I\\'m <span class="name-grad">Sourish Suri</span>';
+    const rotating = [
+      'Aspiring Quant Researcher & Trader',
+      'Machine Learning Builder',
+      'Exploring Data Science & Finance'
+    ];
+
+    // type once for nameLine and stop
+    (function typeOnce(){
+      let i=0;
+      function step(){
+        heroOne.innerHTML = nameLine.substring(0,i);
+        i++;
+        if(i <= nameLine.length) setTimeout(step, 30);
+        else { /* keep it displayed, remove caret from cycling */ }
+      }
+      step();
+    })();
+
+    // rotating typing for heroRot
+    (function rotatingType(){
+      let part = 0, sub=0, forward=true, delay=12, wait=0;
+      function tick(){
+        const str = rotating[part];
+        if(forward){
+          sub++;
+          heroRot.innerHTML = str.substring(0,sub);
+          if(sub === str.length){ forward=false; wait=delay; }
+        } else {
+          if(wait>0){ wait--; }
+          else {
+            sub--;
+            heroRot.innerHTML = str.substring(0,sub);
+            if(sub === 0){ forward=true; part = (part+1) % rotating.length; }
+          }
+        }
+      }
+      setInterval(tick, 80);
+    })();
+
+    // ---- Skill hover interactions
+    const skillButtons = document.querySelectorAll('[data-skill]');
+    const skillDetail = document.getElementById('skillDetail');
+    const sdTitle = document.getElementById('sd-title');
+    const sdDesc = document.getElementById('sd-desc');
+
+    const skillData = {
+      python: {title:'Python', desc:'NumPy, Pandas, scikit-learn, TensorFlow/PyTorch. Production scripts, EDA, automation.'},
+      pytorch: {title:'PyTorch', desc:'Deep learning: CNNs, RNNs, training loops, transfer learning, fine-tuning.'},
+      sql: {title:'SQL', desc:'SQL, Postgres, analytics queries, ETL pipelines.'},
+      ml: {title:'Machine Learning', desc:'Supervised learning, time-series, model evaluation, deployment.'}
+    };
+
+    skillButtons.forEach(btn=>{
+      btn.addEventListener('mouseenter', ()=>{
+        const k = btn.getAttribute('data-skill');
+        if(skillData[k]){
+          sdTitle.textContent = skillData[k].title;
+          sdDesc.textContent = skillData[k].desc;
+          skillDetail.classList.remove('hidden');
+        }
+      });
+      btn.addEventListener('mouseleave', ()=>{
+        skillDetail.classList.add('hidden');
+      });
+    });
+
+    // ---- Experience preview buttons
+    const previewBtns = document.querySelectorAll('[data-preview]');
+    const expPreview = document.getElementById('expPreview');
+    previewBtns.forEach(b=>{
+      b.addEventListener('mouseenter', ()=>{
+        const u = b.getAttribute('data-preview');
+        expPreview.style.backgroundImage = `url('${u}')`;
+      });
+      b.addEventListener('mouseleave', ()=>{
+        // optional: revert to first image
+        expPreview.style.backgroundImage = `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1')`;
+      });
+    });
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
