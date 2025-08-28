@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Styles */
 body {
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
+  @apply bg-black text-white font-sans;
 }
 
 html {
