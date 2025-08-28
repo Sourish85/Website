@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sourish Suri — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .typing::after { content: '|'; animation: blink 1s infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#0b0d10] to-[#111419] text-white">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="font-extrabold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">SS</h1>
+      <nav>
+        <ul class="flex space-x-6 text-sm">
+          <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+          <li><a href="#experience" class="hover:text-cyan-400">Experience</a></li>
+          <li><a href="#research" class="hover:text-cyan-400">Research & Projects</a></li>
+          <li><a href="#contact" class="px-3 py-1 rounded-2xl bg-gradient-to-r from-cyan-400 to-purple-400 text-black font-bold">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 py-28 text-center">
+    <h1 id="hero-typing" class="text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></h1>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6">About</h2>
+    <p class="text-gray-400 mb-4">
+      I’m passionate about building data-driven solutions at the intersection of mathematics, machine learning, and quantitative finance. Currently pursuing a BS in Data Science and Mathematics-Computer Science at UC San Diego’s Halıcıoğlu Data Science Institute.
+    </p>
+    <p class="text-gray-400 mb-4">
+      My experience spans research in LLMs and robotics at the University of Pennsylvania, and internships in forecasting, R&D, and machine learning with major industrial firms.
+    </p>
+    <p class="text-gray-400 mb-10">
+      I’m also the founder of SYLVASYNTH, an agritech startup leveraging CNNs for crop disease detection deployed with 50+ farmers across Asia.
+    </p>
+    <!-- Skills -->
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <h3 class="font-semibold mb-6 text-lg">Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="flex flex-col items-center">
+          <img src="https://img.icons8.com/color/48/python.png" alt="Python"/>
+          <p class="mt-2">Python</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="C++"/>
+          <p class="mt-2">C++</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="https://img.icons8.com/color/48/sql.png" alt="SQL"/>
+          <p class="mt-2">SQL</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI"/>
+          <p class="mt-2">Machine Learning</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-4xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center">Experience</h2>
+    <div class="space-y-12">
+      <div class="border-l-2 border-cyan-400 pl-6 relative">
+        <span class="absolute -left-3 top-2 w-6 h-6 bg-cyan-400 rounded-full"></span>
+        <h3 class="font-semibold text-xl">Data Science Intern — Evoastra Ventures Pvt. Ltd.</h3>
+        <p class="text-sm text-gray-400 mb-2">Jul - Aug 2025</p>
+        <p class="text-gray-300">Designed and implemented an image captioning pipeline combining CNN feature extraction (InceptionV3) with LSTM-based sequence generation. Optimized with categorical cross-entropy and Adam, achieving coherence on MS COCO with BLEU evaluation.</p>
+      </div>
+      <div class="border-l-2 border-cyan-400 pl-6 relative">
+        <span class="absolute -left-3 top-2 w-6 h-6 bg-cyan-400 rounded-full"></span>
+        <h3 class="font-semibold text-xl">R&D Intern — Valeo Ind. Pvt. Ltd.</h3>
+        <p class="text-sm text-gray-400 mb-2">Aug - Oct 2024</p>
+        <p class="text-gray-300">Monitored sales trends for 200+ firms and developed forecasting models for inventory optimization. Designed six data-driven models that enhanced demand forecasting accuracy and improved supply chain decisions.</p>
+      </div>
+      <div class="border-l-2 border-cyan-400 pl-6 relative">
+        <span class="absolute -left-3 top-2 w-6 h-6 bg-cyan-400 rounded-full"></span>
+        <h3 class="font-semibold text-xl">Machine Learning Intern — JP Motors Ltd.</h3>
+        <p class="text-sm text-gray-400 mb-2">May - Jul 2024</p>
+        <p class="text-gray-300">Applied regression and time-series methods on multi-year automobile sales data to forecast SKU-level demand. Analyzed seasonal pricing fluctuations and optimized procurement planning across 300+ retail outlets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research & Projects -->
+  <section id="research" class="max-w-4xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center">Research & Projects</h2>
+    <div class="space-y-6">
+      <a href="https://github.com/Sourish85/CNN-CROP-DIS-DETECTOR" target="_blank" class="group block bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400 transition">
+        <h3 class="text-2xl font-semibold">SYLVASYNTH</h3>
+        <p class="text-sm text-gray-400">Founded an agritech startup that developed a CNN-based crop disease detection platform, achieving 94% accuracy on 250,000+ images. Deployed to 50+ farmers across India, Sri Lanka, Bangladesh, and the Philippines.</p>
+        <img src="https://img.icons8.com/color/96/plant-under-sun.png" alt="Sylvasynth" class="mt-4 opacity-70 group-hover:opacity-100 transition"/>
+      </a>
+      <a href="https://arxiv.org/abs/2507.09375v1" target="_blank" class="group block bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400 transition">
+        <h3 class="text-2xl font-semibold">University of Pennsylvania Collaboration</h3>
+        <p class="text-sm text-gray-400">Worked with Dr. Yifei Shao on applied research in large language models and neural robotics. Published on arXiv: "Automated Multi-Class Crop Pathology Classification via CNNs," advancing transformer-based architectures for cross-lingual vision tasks.</p>
+        <img src="https://img.icons8.com/color/96/university.png" alt="UPenn" class="mt-4 opacity-70 group-hover:opacity-100 transition"/>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <p class="text-gray-400 mb-8">Have a question or want to collaborate? Reach out to me directly.</p>
+    <div class="flex gap-6 justify-center">
+      <a href="mailto:sourishwb@gmail.com" target="_blank" class="p-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 hover:scale-110 transform transition"><img src="https://img.icons8.com/ios-filled/50/ffffff/apple-mail.png" alt="Email" class="w-8 h-8"/></a>
+      <a href="https://www.linkedin.com/in/sourish-suri-b19b50235" target="_blank" class="p-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 hover:scale-110 transform transition"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" class="w-8 h-8"/></a>
+      <a href="https://github.com/Sourish85" target="_blank" class="p-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 hover:scale-110 transform transition"><img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" class="w-8 h-8"/></a>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-gray-500 text-sm border-t border-white/10">
+    © <script>document.write(new Date().getFullYear())</script> Sourish Suri. Built with React, Tailwind, and animations.
+  </footer>
+
+  <script>
+    const sentences = [
+      "Hi, I’m Sourish Suri",
+      "Quantitative Research Enthusiast",
+      "Machine Learning & AI Explorer",
+      "Building at the intersection of Finance and Data Science"
+    ];
+
+    let part = 0;
+    let offset = 0;
+    let forwards = true;
+    let skipCount = 0;
+    let skipDelay = 15;
+    let speed = 100;
+    const target = document.getElementById("hero-typing");
+
+    function type() {
+      const sentence = sentences[part];
+      if (forwards) {
+        if (offset >= sentence.length) {
+          skipCount++;
+          if (skipCount === skipDelay) {
+            forwards = false;
+            skipCount = 0;
+          }
+        }
+      } else {
+        if (offset === 0) {
+          forwards = true;
+          part++;
+          if (part >= sentences.length) part = 0;
+        }
+      }
+      target.textContent = sentence.substring(0, offset);
+      if (skipCount === 0) offset += forwards ? 1 : -1;
+    }
+
+    setInterval(type, speed);
+  </script>
+</body>
+</html>
+
